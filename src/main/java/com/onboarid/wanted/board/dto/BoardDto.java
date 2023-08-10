@@ -1,9 +1,11 @@
 package com.onboarid.wanted.board.dto;
 
+import lombok.Builder;
 import lombok.Getter;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 
 @Getter
 public class BoardDto {
@@ -16,10 +18,14 @@ public class BoardDto {
     }
     @Getter
     public static class Patch {
-
+        @Positive
+        private long boardId;
+        private String title;
+        private String content;
     }
-    @Getter
+    @Getter @Builder
     public static class Response {
-
+        private String title;
+        private String content;
     }
 }
