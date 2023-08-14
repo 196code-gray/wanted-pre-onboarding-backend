@@ -1,12 +1,16 @@
 package com.onboarid.wanted.board.entity;
 
 import com.onboarid.wanted.user.entity.User;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity @Builder @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
