@@ -1,13 +1,16 @@
 package com.onboarid.wanted.user.controller;
 
+import com.onboarid.wanted.user.dto.UserPostDto;
+import com.onboarid.wanted.user.entity.User;
 import com.onboarid.wanted.user.mapper.UserMapper;
 import com.onboarid.wanted.user.service.UserService;
+import com.onboarid.wanted.util.URICreator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.net.URI;
 
 @RestController
 @RequestMapping("/users")
@@ -16,14 +19,11 @@ public class UserController {
     private final UserService userService;
     private final UserMapper userMapper;
 
-    @PostMapping
-    public ResponseEntity postUser () {
-        return null;
-    }
+    @PostMapping("/sign-up")
+    public ResponseEntity postUser (@RequestBody @Valid UserPostDto postDto) {
+        User user = userService.savedUser(userMapper.PostDtoToEntity(postDto));
+        URI uri = URICreator.createUri("/users/sign-up", user.getUserId());
 
-    @PatchMapping
-    public ResponseEntity patchUser () {
-        return null;
+        return ResponseEntity.created(uri).build();
     }
-
 }
