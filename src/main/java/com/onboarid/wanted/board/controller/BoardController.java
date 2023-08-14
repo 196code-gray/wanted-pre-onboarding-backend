@@ -35,7 +35,7 @@ public class BoardController {
     }
 
     @PatchMapping
-    public ResponseEntity patchBoard (@RequestBody BoardDto.Patch patch) {
+    public ResponseEntity patchBoard (@RequestBody @Valid BoardDto.Patch patch) {
 
         return new ResponseEntity<>(mapper.entityToResponseDto(
                 service.updateBoard(
@@ -60,11 +60,12 @@ public class BoardController {
         Page<Board> boardPage = service.findAllBoards(pageable);
         List<BoardDto.Response> result = mapper.pageToResponseDto(boardPage);
 
-        return new ResponseEntity(new MultiResponse<>(result, boardPage), HttpStatus.OK);
+        return new ResponseEntity<>(new MultiResponse<>(result, boardPage), HttpStatus.OK);
     }
 
     @DeleteMapping("/{board-id}")
     public ResponseEntity deleteBoard (@PathVariable("board-id") @Positive long boardId) {
+        service.deleteBoard(boardId);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 }

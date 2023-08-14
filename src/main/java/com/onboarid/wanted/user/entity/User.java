@@ -1,11 +1,13 @@
 package com.onboarid.wanted.user.entity;
 
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
-@Entity @Getter @Builder
+@Entity @Getter @Builder @AllArgsConstructor @NoArgsConstructor
+@Setter
 @Table(name = "USERS")
 public class User {
     @Id
@@ -18,7 +20,7 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    public User() {
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> roles = new ArrayList<>();
 
-    }
 }
