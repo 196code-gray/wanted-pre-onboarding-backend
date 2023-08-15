@@ -94,7 +94,7 @@ class UserControllerTest {
                                 )
                         ),
                         responseHeaders(
-                                headerWithName(HttpHeaders.LOCATION).description("Location header.")
+                                headerWithName(HttpHeaders.LOCATION).description("Location header. 등록된 리소스의 URI")
                         )));
     }
 
