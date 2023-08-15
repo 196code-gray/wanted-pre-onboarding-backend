@@ -9,9 +9,6 @@ import org.springframework.data.domain.PageRequest;
 import java.util.List;
 
 public class StubData {
-    public static class MockUser {
-
-    }
     public static class MockBoard {
         public static BoardDto.Post post = BoardDto.Post
                     .builder()
@@ -22,8 +19,8 @@ public class StubData {
             public static BoardDto.Patch patch = BoardDto.Patch
                     .builder()
                     .boardId(1L)
-                    .title("제목이 수정되었습니다")
-                    .content("내용이 수정되었습니다.")
+                    .title("제목입니다.")
+                    .content("내용입니다.")
                     .build();
 
         public static BoardDto.Response getOneBoardResponse() {
