@@ -15,7 +15,7 @@
 
 ## 구현한 API의 동작을 촬영한 데모 영상 링크
 
-https://youtu.be/Su7og3PCRKw
+https://youtu.be/Uze_2gNhvWw
 
 </br>
 
