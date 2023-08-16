@@ -25,22 +25,7 @@
 
 ## 데이터베이스 테이블 구조
 
-![image](https://github.com/196code-gray/wanted-pre-onboarding-backend/assets/88307264/67755312-e6eb-453d-8b4e-a5a7cc00ff8e)
-
-</br>
-
-## 구현한 API의 동작을 촬영한 데모 영상 링크
-
-https://youtu.be/Uze_2gNhvWw
-
-</br>
-
-## 구현 방법 및 이유
-
-- 과제 1. 사용자 회원가입 엔드포인트
-    - 이메일과 비밀번호로 회원가입할 수 있는 엔드포인트를 구현해 주세요. -> 완료
-    - 이메일과 비밀번호에 대한 유효성 검사를 구현해 주세요. -> 완료
-        - 이메일 조건: @ 포함 -> 관료
+![image](https://github.com/196code-gray/wanted-pre-onboarding-backend/assets/88307264/67755312-e6eb-453d-8b4e-a5a7cc00완료
         - 비밀번호 조건: 8자 이상 -> 완료
         - 비밀번호는 반드시 암호화하여 저장해 주세요. -> 완료
         - 이메일과 비밀번호의 유효성 검사는 위의 조건만으로 진행해 주세요. 추가적인 유효성 검사 조건은 포함하지 마세요. -> 완료
@@ -64,7 +49,7 @@ https://youtu.be/Uze_2gNhvWw
 
 사용 스택
 ```
-java
+java 11
 mysql 8.0.3
 spring boot 2.7.14, jpa
 spring security, jwt
