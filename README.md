@@ -48,7 +48,13 @@ mockito, junit5
 ```
 간단한 게시판 API 입니다.
 
-게시글 등록, 수정, 삭제시 유저 본인을 인증하기 위한송
+게시글 등록, 수정, 삭제시 유저 본인을 인증하기 위한 방법으로 Header Authorization 으로 accessToken 을 담아 게시글 본인 인증을 진행하도록 구현하였습니다.
+
+서버에서 발생하는 에러를 예외처리 하였습니다.
+```
+GlobalException : BusinessException 에서 발생되는 예외에 설명을 더한 예외
+BusinessException : 비즈니스 로직에서 발생되는 예외
+ErrorResponse : 발생되는 모든 예외를 지정한 형식으로 전달
 ErrorResponder : user 인증 과정에서 발생되는 예외
 ```
 
@@ -56,6 +62,8 @@ ErrorResponder : user 인증 과정에서 발생되는 예외
 
 ## API 명세
 [API문서](http://localhost:63342/wanted/src/main/resources/static/docs/index.html?_ijt=qa1rtq89l291bbrc1qn0c45ef0&_ij_reload=RELOAD_ON_SAVE#_%EA%B2%8C%EC%8B%9C%EA%B8%80_%EB%93%B1%EB%A1%9D)
+
+</br>
 
 ## 요구사항
 
