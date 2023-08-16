@@ -13,13 +13,13 @@
 
 게시글 작성 ```/boards``` ```Header 에 Authorization 으로 accessToken 함께 요청```
 
-게시글 수정 ```/boards``````Header 에 Authorization 으로 accessToken 함께 요청```
+게시글 수정 ```/boards``` ```Header 에 Authorization 으로 accessToken 함께 요청```
 
 게시글 단일 조회 ```/boards/{board-id}```
 
 게시글 전체 조회 ```/boards?page=1&size=10```
 
-게시글 삭제 ```/boards/1``````Header 에 Authorization 으로 accessToken 함께 요청```
+게시글 삭제 ```/boards/1``` ```Header 에 Authorization 으로 accessToken 함께 요청```
 
 
 </br>
@@ -48,13 +48,7 @@ mockito, junit5
 ```
 간단한 게시판 API 입니다.
 
-게시글 등록, 수정, 삭제시 유저 본인을 인증하기 위한 방법으로 Header Authorization 으로 accessToken 을 담아 게시글 본인 인증을 진행하도록 구현하였습니다.
-
-서버에서 발생하는 에러를 예외처리 하였습니다.
-```
-GlobalException : BusinessException 에서 발생되는 예외에 설명을 더한 예외
-BusinessException : 비즈니스 로직에서 발생되는 예외
-ErrorResponse : 발생되는 모든 예외를 지정한 형식으로 전달
+게시글 등록, 수정, 삭제시 유저 본인을 인증하기 위한송
 ErrorResponder : user 인증 과정에서 발생되는 예외
 ```
 
