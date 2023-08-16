@@ -4,6 +4,7 @@ import com.onboarid.wanted.security.jwt.CustomAuthorityUtils;
 import com.onboarid.wanted.security.jwt.filter.JwtAuthenticationFilter;
 import com.onboarid.wanted.security.jwt.JwtTokenizer;
 import com.onboarid.wanted.security.jwt.filter.JwtVerificationFilter;
+import com.onboarid.wanted.security.jwt.handler.UserAccessDeniedHandler;
 import com.onboarid.wanted.security.jwt.handler.UserFailureHandler;
 import com.onboarid.wanted.security.jwt.handler.UserSuccessHandler;
 import lombok.RequiredArgsConstructor;
@@ -40,6 +41,10 @@ public class SecurityConfig {
                 .httpBasic().disable()
                 .cors(withDefaults())
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .exceptionHandling()
+                .authenticationEntryPoint(new UserAuthenticationEntryPoint())
+                .accessDeniedHandler(new UserAccessDeniedHandler())
                 .and()
                 .apply(new CustomFilterConfigurer())
                 .and()
