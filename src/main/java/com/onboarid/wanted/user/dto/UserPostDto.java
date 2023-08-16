@@ -8,9 +8,10 @@ import javax.validation.constraints.*;
 
 @Getter @Builder
 public class UserPostDto {
-    @Email
+    @Email(message = "이메일 형식에 맞지 않습니다.")
     private String email;
-//    @Pattern(regexp = "/^{8,}$/", message = "비밀번호는 최소 8글자 이상")
-    @Size(min = 8) @NotBlank
+
+    @Size(min = 8, message = "길이가 8글자 이상이여야합니다.")
+    @NotBlank
     private String password;
 }
