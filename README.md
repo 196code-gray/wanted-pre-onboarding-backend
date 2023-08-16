@@ -61,7 +61,7 @@ ErrorResponder : user 인증 과정에서 발생되는 예외
 </br>
 
 ## API 명세
-[API문서](http://localhost:63342/wanted/src/main/resources/static/docs/index.html?_ijt=qa1rtq89l291bbrc1qn0c45ef0&_ij_reload=RELOAD_ON_SAVE#_%EA%B2%8C%EC%8B%9C%EA%B8%80_%EB%93%B1%EB%A1%9D)
+[API 문서](http://ec2-13-124-55-108.ap-northeast-2.compute.amazonaws.com:8080/docs/index.html)
 
 </br>
 
